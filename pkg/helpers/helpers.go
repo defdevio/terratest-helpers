@@ -6,7 +6,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/Azure/azure-sdk-for-go/services/resources/mgmt/2021-04-01/resources"
+	"github.com/Azure/azure-sdk-for-go/profiles/latest/resources/mgmt/resources"
 	"github.com/gruntwork-io/terratest/modules/azure"
 )
 
@@ -85,6 +85,7 @@ func DeleteAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup
 	if err != nil {
 		t.Fatal(err)
 	}
+
 	return err
 }
 
