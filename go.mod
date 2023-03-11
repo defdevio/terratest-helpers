@@ -3,8 +3,8 @@ module github.com/defdevio/terratest-helpers
 go 1.20
 
 require (
-	github.com/Azure/azure-sdk-for-go v68.0.0+incompatible
-	github.com/gruntwork-io/terratest v0.41.15
+	github.com/Azure/azure-sdk-for-go v50.2.0+incompatible
+	github.com/gruntwork-io/terratest v0.41.11
 )
 
 require (
@@ -20,10 +20,10 @@ require (
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dimchansky/utfbom v1.1.1 // indirect
-	github.com/gofrs/uuid v4.4.0+incompatible // indirect
 	github.com/golang-jwt/jwt/v4 v4.0.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
 	golang.org/x/crypto v0.1.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

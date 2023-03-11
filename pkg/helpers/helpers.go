@@ -81,7 +81,7 @@ func DeleteAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup
 		t.Fatal(err)
 	}
 
-	_, err = resourceGroupClient.Delete(ctx, resourceGroup, "")
+	_, err = resourceGroupClient.Delete(ctx, resourceGroup)
 	if err != nil {
 		t.Fatal(err)
 	}
