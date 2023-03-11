@@ -6,7 +6,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/Azure/azure-sdk-for-go/profiles/latest/resources/mgmt/resources"
+	"github.com/Azure/azure-sdk-for-go/services/resources/mgmt/2021-04-01/resources"
 	"github.com/gruntwork-io/terratest/modules/azure"
 )
 
@@ -40,7 +40,7 @@ provider "azurerm" {
 	return err
 }
 
-func CreateAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup string, location string) error {
+func CreateAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup string, location *string) error {
 	resourceGroupClient, err := azure.CreateResourceGroupClientE(subscriptionID)
 	if err != nil {
 		t.Fatal(err)
@@ -48,7 +48,7 @@ func CreateAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup
 
 	// Create the resource group using the resourceGroupClient
 	resp, err := resourceGroupClient.CreateOrUpdate(ctx, resourceGroup, resources.Group{
-		Location: &location,
+		Location: location,
 	})
 
 	if err != nil {
