@@ -40,7 +40,7 @@ provider "azurerm" {
 	return err
 }
 
-func CreateAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup, string, location string) error {
+func CreateAzureResourceGroup(t *testing.T, subscriptionID string, resourceGroup string, location string) error {
 	resourceGroupClient, err := azure.CreateResourceGroupClientE(subscriptionID)
 	if err != nil {
 		t.Fatal(err)
